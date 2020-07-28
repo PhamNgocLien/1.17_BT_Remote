@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tivi and Remote</title>
+</head>
+<body>
+<div id="tivi" style="width: 300px; height: 200px; background-color: black"></div>
+<table>
+    <tbody>
+    <tr>
+        <td rowspan="2">
+            <button type="button" onclick="tivi.turnOnOff()">ON/OFF</button>
+        </td>
+        <td>
+            <button type="button" value="1" onclick="tivi.changeChanel(this.value)">1</button>
+        </td>
+        <td>
+            <button type="button" value="2" onclick="tivi.changeChanel(this.value)">2</button>
+        </td>
+        <td>
+            <button type="button" value="3" onclick="tivi.changeChanel(this.value)">3</button>
+        </td>
+        <td>
+            <button type="button" value="4" onclick="tivi.changeChanel(this.value)">4</button>
+        </td>
+        <td>
+            <button type="button" value="5" onclick="tivi.changeChanel(this.value)">5</button>
+        </td>
+        <td>
+            <button type="button" onclick="tivi.creaseVoice()">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" value="6" onclick="tivi.changeChanel(this.value)">6</button>
+        </td>
+        <td>
+            <button type="button" value="7" onclick="tivi.changeChanel(this.value)">7</button>
+        </td>
+        <td>
+            <button type="button" value="8" onclick="tivi.changeChanel(this.value)">8</button>
+        </td>
+        <td>
+            <button type="button" value="9" onclick="tivi.changeChanel(this.value)">9</button>
+        </td>
+        <td>
+            <button type="button" value="0" onclick="tivi.changeChanel(this.value)">0</button>
+        </td>
+        <td>
+            <button type="button" onclick="tivi.decreaseVoice()">-</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</br>
+<table style="background-color: antiquewhite">
+    <tbody>
+    <tr>
+        <td><h5 style="text-align: center">REMOTE</h5></td>
+        <td>
+            <button type="button" value="1" onclick="remote.changeChanel(this.value)">1</button>
+        </td>
+        <td>
+            <button type="button" value="2" onclick="remote.changeChanel(this.value)">2</button>
+        </td>
+        <td>
+            <button type="button" value="3" onclick="remote.changeChanel(this.value)">3</button>
+        </td>
+        <td>
+            <button type="button" value="4" onclick="remote.changeChanel(this.value)">4</button>
+        </td>
+        <td>
+            <button type="button" value="5" onclick="remote.changeChanel(this.value)">5</button>
+        </td>
+        <td>
+            <button type="button" onclick="remote.creaseVoice()">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="remote.turnOnOff()">ON/OFF</button>
+        </td>
+        <td>
+            <button type="button" value="6" onclick="remote.changeChanel(this.value)">6</button>
+        </td>
+        <td>
+            <button type="button" value="7" onclick="remote.changeChanel(this.value)">7</button>
+        </td>
+        <td>
+            <button type="button" value="8" onclick="remote.changeChanel(this.value)">8</button>
+        </td>
+        <td>
+            <button type="button" value="9" onclick="remote.changeChanel(this.value)">9</button>
+        </td>
+        <td>
+            <button type="button" value="0" onclick="remote.changeChanel(this.value)">0</button>
+        </td>
+        <td>
+            <button type="button" onclick="remote.decreaseVoice()">-</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script src="js/tivi.js"></script>
+<script src="js/remote.js"></script>
+<script>
+    let tivi = new Tivi();
+    let remote = new Remote();
+    remote.connectToTivi(tivi);
+</script>
+</body>
+</html>
